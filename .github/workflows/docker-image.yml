@@ -2,15 +2,13 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ Matrix ]
+    branches: [Matrix]
 
 jobs:
-
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag docker-kodi-headless-armhf:latest
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag docker-kodi-headless-armhf:latest

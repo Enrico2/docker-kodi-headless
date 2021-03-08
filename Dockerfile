@@ -1,4 +1,4 @@
-FROM lsiobase/ubuntu:bionic as buildstage
+FROM lsiobase/ubuntu.armhf:bionic as buildstage
 
 ############## build stage ##############
 
@@ -144,7 +144,7 @@ RUN \
 	/tmp/kodi-source/tools/EventClients/lib/python/xbmcclient.py \
 	/tmp/kodi-build/usr/lib/python3.6/xbmcclient.py
 
-FROM lsiobase/ubuntu:bionic
+FROM lsiobase/ubuntu.armhf:bionic
 
 ############## runtime stage ##############
 
